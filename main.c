@@ -24,8 +24,31 @@ int  sTw(int a,int b, int k)
            r=1;
         }
 
+
     return r;
+
+void detobin ()
+{
+	int T[5],
+		a,i,j;
+	i=0;
+
+	printf("Donner un nombre superieur a 0 : \n");
+	scanf ("%d",&a);
+
+	while (a!=0)
+	{
+		T[i]=a%2;
+		a=a/2;
+		i++;
+	}
+	for (j=i-1 ; j>=0 ; j--)
+	{
+		printf("%d",T[j]);
+	}
+
 }
+
 
 
 
@@ -69,3 +92,4 @@ int	main()
 
 	return 0;
 }
+
