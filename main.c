@@ -1,9 +1,26 @@
 #include <stdio.h>
+#include<math.h>
+
 
 
 // function has two int as an argument and do the addition and convert them to binary and return int
 int rest=0;
+void    functionBin(){
+	int b,a,weight,rem;
 
+	printf("Entrer un nombre binaire : \n");
+	scanf ("%d",&b);
+
+     a = 0,weight = 1;
+    while ( b != 0)
+	{
+		rem = b % 10;
+		a = a + rem*weight;
+		b = b / 10;
+		weight = weight*2;
+	 }
+	 printf("le decimale nombre equivalent est : %d", a);
+}
 
 int  sTw(int a,int b, int k)
 {
@@ -50,13 +67,9 @@ void detobin()
 
 }
 
-
-
-
-
-
-int	main()
+int main ()
 {
+
 
 	int a[3] = {1,0,1};
 	int b[3] = {1,1,0};
@@ -89,4 +102,6 @@ int	main()
 
 	return 0;
 }
+
+
 
