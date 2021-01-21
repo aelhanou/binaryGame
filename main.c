@@ -1,25 +1,24 @@
 #include <stdio.h>
-
-
-// function has two int as an argument and do the addition and convert them to binary and return int
-
+#include<math.h>
 
 
 
 
 
-
-
-int	main()
+int main ()
 {
+	int b,a,weight,rem;
 	
-	int a[3] = {1,1,0};
-	int b[3] = {0,1,1}
+	printf("Entrer un nombre binaire : \n");
+	scanf ("%d",&b);
 	
-	
-	// fonction switch mn binary to dicimal
-	
-	
-	
-	return 0;
+     a = 0,weight = 1;
+    while ( b != 0)
+	{
+		rem = b % 10;
+		a = a + rem*weight;
+		b = b / 10;
+		weight = weight*2;
+	 } 
+	 printf("le decimale nombre equivalent est : %d", a);
 }
