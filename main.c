@@ -30,16 +30,3 @@ int main ()
 
 
 
-int	main()
-{
-	
-	int a[3] = {1,1,0};
-	int b[3] = {0,1,1};
-	
-	
-	
-	
-	
-	
-	return 0;
-}
