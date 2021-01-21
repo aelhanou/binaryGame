@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include<math.h>
 
-
+int T[3];
 
 // function has two int as an argument and do the addition and convert them to binary and return int
 int rest=0;
@@ -19,7 +19,8 @@ void    functionBin(){
 		b = b / 10;
 		weight = weight*2;
 	 }
-	 printf("le decimale nombre equivalent est : %d", a);
+	 printf("\nle decimale nombre equivalent est : %d\n", a);
+	 printf("\n\n");
 }
 
 int  sTw(int a,int b, int k)
@@ -47,24 +48,24 @@ int  sTw(int a,int b, int k)
 }
 void detobin()
 {
-	int T[5],
-		a,i,j;
+	int	a,i,j,k;
 	i=0;
 
 	printf("Donner un nombre superieur a 0 : \n");
 	scanf ("%d",&a);
-
+    k = a;
 	while (a!=0)
 	{
 		T[i]=a%2;
 		a=a/2;
 		i++;
 	}
+	printf("the binary of %d is :",k);
 	for (j=i-1 ; j>=0 ; j--)
 	{
 		printf("%d",T[j]);
 	}
-
+    printf("\n\n");
 }
 
 int main ()
@@ -72,31 +73,31 @@ int main ()
 
 
 	int a[3] = {1,0,1};
-	int b[3] = {1,1,0};
 	int c[4] = {0,0,0,0};
     int i;
 
     detobin();
+    functionBin();
+    for (i = 2;i >= 0;i--)
+    {
+        c[i+1]=sTw(a[i],T[i], rest);
 
-//    for (i = 2;i >= 0;i--)
-//    {
-//        c[i+1]=sTw(a[i],b[i], rest);
-//
-//    }
-//    if(rest==1)
-//    {
-//        c[0]=rest;
-//
-//    }
-//    if(rest==1)
-//    {
-//        printf("%d",c[0]);
-//    }
-//    for (i = 1 ; i <4; i++)
-//    {
-//        printf("%d",c[i]);
-//    }
+    }
+    if(rest==1)
+    {
+        c[0]=rest;
 
+    }
+    printf("the sum of two binary is : ");
+    if(rest==1)
+    {
+        printf("%d",c[0]);
+    }
+    for (i = 1 ; i <4; i++)
+    {
+        printf("%d",c[i]);
+    }
+    printf("\n\n");
 
 
 
