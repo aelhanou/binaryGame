@@ -4,13 +4,26 @@
 // function has two int as an argument and do the addition and convert them to binary and return int
 
 
-int DtoB(){
-	int a,
-		x;
-	int T[4];
-	printf("saisir un nombre decimal a converti : \n");
-	scanf("%d",&a);
+
+int main ()
+{
+	int T[5],
+		a,i,j;
+	i=0;
 	
+	printf("Donner un nombre superieur a 0 : \n");
+	scanf ("%d",&a);
+	
+	while (a!=0)
+	{
+		T[i]=a%2;
+		a=a/2;
+		i++;
+	}
+	for (j=i-1 ; j>=0 ; j--)
+	{
+		printf("%d",T[j]);
+	}
 }
 
 
