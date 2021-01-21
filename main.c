@@ -17,7 +17,7 @@ int	main()
 	int b[3] = {0,1,1}
 	
 	
-	
+	// fonction switch mn binary to dicimal
 	
 	
 	
